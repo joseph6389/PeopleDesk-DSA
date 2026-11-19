@@ -1,0 +1,3 @@
+package edu.college.employee.dsa;
+import java.util.ArrayList;import java.util.List;
+public final class LinkedStack<T>{private static final class Node<T>{T v;Node<T> next;Node(T v,Node<T> n){this.v=v;next=n;}}private Node<T> top;private int size;public int size(){return size;}public boolean isEmpty(){return top==null;}public void push(T v){top=new Node<>(v,top);size++;}public T pop(){if(top==null)throw new IllegalStateException("Stack is empty");T v=top.v;top=top.next;size--;return v;}public T peek(){if(top==null)throw new IllegalStateException("Stack is empty");return top.v;}public List<T> display(){List<T> r=new ArrayList<>();for(Node<T> n=top;n!=null;n=n.next)r.add(n.v);return List.copyOf(r);}public void clear(){top=null;size=0;}}

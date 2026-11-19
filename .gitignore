@@ -1,0 +1,12 @@
+/build/
+/target/
+*.tmp
+.idea/
+*.iml
+backup-before-standalone-*.zip
+.integration-data/
+
+/data/
+
+# Temporary documentation workspace
+.documentation-work/
